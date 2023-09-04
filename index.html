@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan Selamat Ulang Tahun</title>
+    <style>
+        .book {
+            width: 300px;
+            height: 400px;
+            margin: 20px auto;
+            background-color: rgba(50, 154, 90, 0.8); /* Menambahkan lapisan transparan untuk memastikan teks terbaca dengan baik */
+            position: relative;
+        }
+        .page {
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        .cover {
+            background-color: #66a3ff;
+            color: black;
+            text-align: center;
+            font-size: 11px;
+            line-height: 130px; /* Mengubah jarak antar baris menjadi 3 baris (30px) */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url('https://tse4.mm.bing.net/th?id=OIP.c65-zX37_CT7paXvFBG4UAHaFP&pid=Api&P=0&h=180'); /* Gantilah URL dengan URL gambar latar belakang yang valid */
+            background-size: 300px 400px; /* Atur ukuran background-image sesuai dengan ukuran cover */
+        }
+
+        .message {
+            padding: 20px;
+            text-align: center;
+        }
+        button {
+            margin-top: 20px;
+            background-color: #66a3ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="book">
+        <div class="page cover">
+            <h1 style="font-size: 15px;">HAPPY BIRTHDAY</h1>
+            <div>
+            <h1 style="font-size: 18px;">Tyara Virnasari Dewi</h1>
+            </div>
+            <button onclick="showBirthdayMessage()">Buka Pesan</button>
+        </div>
+        <div class="page message">
+            <h2>Hari ini adalah hari istimewa buatmu,</h2>
+            <p>Di hari istimewa ini, saya ingin mengucapkan selamat ulang tahun buat dirimu. Semoga hari ini dan setiap hari-hari di masa depan penuh dengan kebahagiaan, kesehatan, dan keberuntungan, tetap semangat .</p>
+            <p>by.:man.l</p>
+        </div>
+    </div>
+
+    <script>
+        function showBirthdayMessage() {
+            const coverPage = document.querySelector('.cover');
+            const messagePage = document.querySelector('.message');
+
+            coverPage.style.display = 'none'; // Menghilangkan halaman pertama
+            messagePage.classList.add('active');
+        }
+    </script>
+</body>
+</html>
